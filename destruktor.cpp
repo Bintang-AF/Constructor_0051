@@ -13,3 +13,29 @@ class angka{
     void isidata();
 };
 
+angka::angka(int i){
+    panjang = i;
+    arr = new int[i];
+    isidata();
+}
+
+angka::~angka(){
+    cout << endl;
+    cetakdata();
+    delete[]arr;
+    cout << "Alamat array sudah dilepaskan"<< endl;
+}
+
+void angka::cetakdata(){
+    for (int i=1;i<=panjang;i++){
+        cout << i <<" = "<< arr[i]<<endl;
+    }
+}
+
+void angka::isidata(){
+    for(int i=1;i<=panjang;i++){
+        cout<<i<<" = ";cin>>arr[i];
+    }
+    cout << endl;
+    
+}
