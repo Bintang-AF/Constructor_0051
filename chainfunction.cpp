@@ -16,3 +16,9 @@ class buku
     }
 
 } bukunya ;
+
+int main()
+{
+    cout << bukunya.setjudul("matematika").getjudul();
+    return 0;
+} 
